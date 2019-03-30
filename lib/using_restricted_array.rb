@@ -6,8 +6,8 @@ require_relative 'restricted_array.rb'
 
 # Calculates the length of the restricted array. All values are integers.
 # The restricted_array is terminated by 'nil' i.e. array[length] = nil
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n) - Linear  with n being the size of the array
+# Space complexity: O(1) - Constant space complexity
 
 array = RestrictedArray.new(20)
 length = 20
@@ -24,8 +24,8 @@ end
 puts length(array)
 
 # # Prints each integer values in the array
-# # Time complexity: ?
-# # Space complexity: ?
+# # Time complexity: O(n) - Linear  with n being the size of the array
+# # Space complexity: O(1) - Constant space complexity
 def print_array(array)
   i = 0
   while array[i] != nil
@@ -38,8 +38,8 @@ print_array(array)
 
 # # For an unsorted array, searches for 'value_to_find'.
 # # Returns true if found, false otherwise.
-# # Time complexity: ?
-# # Space complexity: ?
+# # Time complexity: O(n) - Linear  with n being the size of the array
+# # Space complexity: O(1) - Constant space complexity
 def search(array, length, value_to_find)
   length.times do |i|
     if array[i] == value_to_find
@@ -54,8 +54,8 @@ puts search(array, length, val)
 
 # # Finds and returns the largest integer value the array
 # # Assumes that the array is not sorted.
-# # Time complexity: ?
-# # Space complexity: ?
+# # Time complexity: O(n) - Linear  with n being the size of the array
+# # Space complexity: O(1) - Constant space complexity
 
 def find_largest(array, length)
   largest_int = nil
@@ -74,8 +74,9 @@ puts find_largest(array, length)
 
 # # Finds and returns the smallest integer value in the array
 # # Assumes that the array is not sorted.
-# # Time complexity: ?
-# # Space complexity: ?
+# # Time complexity: O(n) - Linear  with n being the size of the array
+# # Space complexity: O(1) - Constant space complexity
+
 def find_smallest(array, length)
   smallest_int = nil
   i = 0
@@ -91,8 +92,9 @@ end
 puts find_smallest(array, length)
 
 # # Reverses the values in the integer array in place
-# # Time complexity: ?
-# # Space complexity: ?
+# # Time complexity: O(n) - Linear  with n being the size of the array
+# # Space complexity: O(1) - Constant space complexity
+
 def reverse(array, length)
   (length / 2).round.times do |i|
     temp = array[i]
@@ -106,8 +108,8 @@ puts reverse(array, length)
 
 # # For an array sorted in ascending order, searches for 'value_to_find'.
 # # Returns true if found, false otherwise.
-# # Time complexity: ?
-# # Space complexity: ?
+# # Time complexity: O(logn) - Linear  with n being the size of the array
+# # Space complexity: O(1) - Constant space complexity
 
 def binary_search(array, length, value_to_find)
   start_i = 0
